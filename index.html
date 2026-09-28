@@ -6,173 +6,291 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>VistaOne</title>
 
 <style>
 
-* {
+*{box-sizing:border-box}
 
-  box-sizing: border-box;
+body{
 
-}
+margin:0;
 
-body {
+min-height:100vh;
 
-  margin: 0;
+background:#07111f;
 
-  min-height: 100vh;
+color:#fff;
 
-  background: #07111f;
-
-  color: #ffffff;
-
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 
 }
 
-.page {
+.page{
 
-  min-height: 100vh;
+width:100%;
 
-  display: flex;
+max-width:680px;
 
-  align-items: center;
+margin:auto;
 
-  justify-content: center;
-
-  padding: 28px;
+padding:55px 28px;
 
 }
 
-.wrap {
+.logo{
 
-  width: 100%;
+font-size:52px;
 
-  max-width: 460px;
+font-weight:900;
 
-}
-
-.logo {
-
-  font-size: 36px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  margin: 0;
+letter-spacing:3px;
 
 }
 
-.tag {
+.tag{
 
-  margin-top: 6px;
+margin-top:8px;
 
-  margin-bottom: 30px;
+color:#9fb0c7;
 
-  color: #9fb0c7;
+font-size:20px;
 
-  font-size: 16px;
-
-}
-
-.card {
-
-  background: #101d2d;
-
-  border-radius: 22px;
-
-  padding: 24px;
+font-weight:700;
 
 }
 
-h2 {
+.card{
 
-  margin-top: 0;
+margin-top:42px;
 
-  margin-bottom: 8px;
+background:#101d2d;
 
-  font-size: 25px;
+border-radius:26px;
 
-}
-
-.note {
-
-  color: #9fb0c7;
-
-  font-size: 14px;
-
-  line-height: 1.5;
-
-  margin-bottom: 20px;
+padding:28px;
 
 }
 
-input {
+h2{
 
-  display: block;
+font-size:32px;
 
-  width: 100%;
-
-  border: 0;
-
-  outline: none;
-
-  border-radius: 12px;
-
-  background: #17283b;
-
-  color: white;
-
-  padding: 16px;
-
-  margin: 12px 0;
-
-  font-size: 16px;
+margin:0 0 8px;
 
 }
 
-input::placeholder {
+.note{
 
-  color: #8191a6;
+color:#9fb0c7;
 
-}
+font-size:16px;
 
-button {
+line-height:1.5;
 
-  width: 100%;
-
-  border: 0;
-
-  border-radius: 12px;
-
-  background: #2d7dff;
-
-  color: white;
-
-  padding: 16px;
-
-  margin-top: 8px;
-
-  font-size: 16px;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
+margin-bottom:25px;
 
 }
 
-.footer {
+input{
 
-  margin-top: 24px;
+display:block;
 
-  text-align: center;
+width:100%;
 
-  color: #64748b;
+border:0;
 
-  font-size: 13px;
+outline:0;
+
+border-radius:14px;
+
+background:#17283b;
+
+color:#fff;
+
+padding:18px;
+
+margin-bottom:14px;
+
+font-size:17px;
+
+}
+
+input::placeholder{
+
+color:#8296ae;
+
+}
+
+button{
+
+width:100%;
+
+border:0;
+
+border-radius:14px;
+
+background:#2d7dff;
+
+color:#fff;
+
+padding:18px;
+
+font-size:17px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+cursor:pointer;
+
+}
+
+button:disabled{
+
+opacity:.6;
+
+}
+
+.status{
+
+margin-top:18px;
+
+font-size:15px;
+
+line-height:1.4;
+
+color:#9fb0c7;
+
+}
+
+.error{
+
+color:#ff8d8d;
+
+}
+
+.success{
+
+color:#74e39a;
+
+}
+
+.footer{
+
+margin-top:30px;
+
+text-align:center;
+
+color:#64748b;
+
+font-size:14px;
+
+}
+
+.app{
+
+display:none;
+
+}
+
+.topbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:28px;
+
+}
+
+.smallLogo{
+
+font-size:28px;
+
+font-weight:900;
+
+letter-spacing:2px;
+
+}
+
+.logout{
+
+width:auto;
+
+padding:11px 16px;
+
+font-size:13px;
+
+background:#17283b;
+
+}
+
+.welcome{
+
+color:#9fb0c7;
+
+margin-bottom:25px;
+
+}
+
+.menu{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:14px;
+
+}
+
+.tile{
+
+background:#101d2d;
+
+border-radius:20px;
+
+padding:28px 18px;
+
+min-height:125px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.tile strong{
+
+font-size:21px;
+
+}
+
+.tile span{
+
+color:#9fb0c7;
+
+font-size:14px;
+
+margin-top:7px;
+
+}
+
+@media(max-width:500px){
+
+.page{padding:48px 22px}
+
+.logo{font-size:42px}
+
+.card{padding:24px}
 
 }
 
@@ -184,41 +302,355 @@ button {
 
 <div class="page">
 
-  <div class="wrap">
+<section id="login">
 
-    <h1 class="logo">VISTAONE</h1>
+<div class="logo">VISTAONE</div>
 
-    <div class="tag">Your entertainment. One view.</div>
+<div class="tag">Your entertainment. One view.</div>
 
-    <div class="card">
+<div class="card">
 
-      <h2>Sign in</h2>
+<h2>Sign in</h2>
 
-      <div class="note">
+<div class="note">
 
-        Use credentials from a supported IPTV provider.
-
-      </div>
-
-      <input type="text" placeholder="Server URL">
-
-      <input type="text" placeholder="Username">
-
-      <input type="password" placeholder="Password">
-
-      <button type="button">CONTINUE</button>
-
-    </div>
-
-    <div class="footer">
-
-      VistaOne • Personal media player
-
-    </div>
-
-  </div>
+Use credentials from a supported IPTV provider.
 
 </div>
+
+<input
+
+id="server"
+
+type="url"
+
+placeholder="Server URL"
+
+autocapitalize="none"
+
+autocomplete="url">
+
+<input
+
+id="username"
+
+type="text"
+
+placeholder="Username"
+
+autocapitalize="none"
+
+autocomplete="username">
+
+<input
+
+id="password"
+
+type="password"
+
+placeholder="Password"
+
+autocomplete="current-password">
+
+<button id="loginButton" onclick="login()">
+
+CONTINUE
+
+</button>
+
+<div id="status" class="status"></div>
+
+</div>
+
+<div class="footer">
+
+VistaOne • Personal media player
+
+</div>
+
+</section>
+
+<section id="app" class="app">
+
+<div class="topbar">
+
+<div class="smallLogo">
+
+VISTAONE
+
+</div>
+
+<button class="logout" onclick="logout()">
+
+LOG OUT
+
+</button>
+
+</div>
+
+<h2>Welcome</h2>
+
+<div id="account" class="welcome">
+
+Provider connected.
+
+</div>
+
+<div class="menu">
+
+<div class="tile">
+
+<strong>Live TV</strong>
+
+<span>Browse live channels</span>
+
+</div>
+
+<div class="tile">
+
+<strong>Movies</strong>
+
+<span>Browse your provider's movies</span>
+
+</div>
+
+<div class="tile">
+
+<strong>Series</strong>
+
+<span>Browse TV series</span>
+
+</div>
+
+<div class="tile">
+
+<strong>EPG</strong>
+
+<span>Programme guide</span>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script>
+
+function cleanServer(value){
+
+return value.trim().replace(/\/+$/,"");
+
+}
+
+async function login(){
+
+const server=cleanServer(
+
+document.getElementById("server").value
+
+);
+
+const username=
+
+document.getElementById("username").value.trim();
+
+const password=
+
+document.getElementById("password").value;
+
+const status=
+
+document.getElementById("status");
+
+const button=
+
+document.getElementById("loginButton");
+
+if(!server || !username || !password){
+
+status.className="status error";
+
+status.textContent=
+
+"Please enter the server URL, username and password.";
+
+return;
+
+}
+
+status.className="status";
+
+status.textContent="Connecting…";
+
+button.disabled=true;
+
+const endpoint=
+
+server+
+
+"/player_api.php?username="+
+
+encodeURIComponent(username)+
+
+"&password="+
+
+encodeURIComponent(password);
+
+try{
+
+const response=
+
+await fetch(endpoint,{
+
+method:"GET",
+
+cache:"no-store"
+
+});
+
+if(!response.ok){
+
+throw new Error("Server returned "+response.status);
+
+}
+
+const data=
+
+await response.json();
+
+if(
+
+data &&
+
+data.user_info &&
+
+String(data.user_info.auth)==="1"
+
+){
+
+status.className="status success";
+
+status.textContent="Connected successfully.";
+
+sessionStorage.setItem(
+
+"vistaServer",
+
+server
+
+);
+
+sessionStorage.setItem(
+
+"vistaUsername",
+
+username
+
+);
+
+sessionStorage.setItem(
+
+"vistaPassword",
+
+password
+
+);
+
+showApp(data);
+
+}
+
+else{
+
+throw new Error("Login rejected");
+
+}
+
+}
+
+catch(error){
+
+console.error(error);
+
+status.className="status error";
+
+status.textContent=
+
+"Could not sign in. Check your server URL and credentials. Your provider must also allow browser access.";
+
+}
+
+finally{
+
+button.disabled=false;
+
+}
+
+}
+
+function showApp(data){
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("app").style.display="block";
+
+const info=data.user_info || {};
+
+let message="Provider connected.";
+
+if(info.username){
+
+message=
+
+"Signed in as "+info.username+".";
+
+}
+
+if(info.exp_date){
+
+const expiry=
+
+new Date(Number(info.exp_date)*1000);
+
+if(!isNaN(expiry)){
+
+message+=
+
+" Subscription expiry: "+
+
+expiry.toLocaleDateString()+".";
+
+}
+
+}
+
+document.getElementById("account").textContent=
+
+message;
+
+}
+
+function logout(){
+
+sessionStorage.removeItem("vistaServer");
+
+sessionStorage.removeItem("vistaUsername");
+
+sessionStorage.removeItem("vistaPassword");
+
+document.getElementById("password").value="";
+
+document.getElementById("status").textContent="";
+
+document.getElementById("app").style.display="none";
+
+document.getElementById("login").style.display="block";
+
+}
+
+</script>
 
 </body>
 
