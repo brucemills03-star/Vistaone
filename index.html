@@ -1,19 +1,224 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <title>VistaOne</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VistaOne</title>
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  background: #07111f;
+
+  color: #ffffff;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+}
+
+.page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 28px;
+
+}
+
+.wrap {
+
+  width: 100%;
+
+  max-width: 460px;
+
+}
+
+.logo {
+
+  font-size: 36px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  margin: 0;
+
+}
+
+.tag {
+
+  margin-top: 6px;
+
+  margin-bottom: 30px;
+
+  color: #9fb0c7;
+
+  font-size: 16px;
+
+}
+
+.card {
+
+  background: #101d2d;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+}
+
+h2 {
+
+  margin-top: 0;
+
+  margin-bottom: 8px;
+
+  font-size: 25px;
+
+}
+
+.note {
+
+  color: #9fb0c7;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+
+}
+
+input {
+
+  display: block;
+
+  width: 100%;
+
+  border: 0;
+
+  outline: none;
+
+  border-radius: 12px;
+
+  background: #17283b;
+
+  color: white;
+
+  padding: 16px;
+
+  margin: 12px 0;
+
+  font-size: 16px;
+
+}
+
+input::placeholder {
+
+  color: #8191a6;
+
+}
+
+button {
+
+  width: 100%;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #2d7dff;
+
+  color: white;
+
+  padding: 16px;
+
+  margin-top: 8px;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+.footer {
+
+  margin-top: 24px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <div id="root"></div>
-  <script type="module" src="./App.js"></script>
+<div class="page">
+
+  <div class="wrap">
+
+    <h1 class="logo">VISTAONE</h1>
+
+    <div class="tag">Your entertainment. One view.</div>
+
+    <div class="card">
+
+      <h2>Sign in</h2>
+
+      <div class="note">
+
+        Use credentials from a supported IPTV provider.
+
+      </div>
+
+      <input type="text" placeholder="Server URL">
+
+      <input type="text" placeholder="Username">
+
+      <input type="password" placeholder="Password">
+
+      <button type="button">CONTINUE</button>
+
+    </div>
+
+    <div class="footer">
+
+      VistaOne • Personal media player
+
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 
